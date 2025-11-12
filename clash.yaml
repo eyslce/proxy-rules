@@ -1,0 +1,30 @@
+
+# claude code 规则内容 (将这两行添加到你的配置文件中)
+  - DOMAIN-SUFFIX,claude.ai,Claude
+  - DOMAIN-SUFFIX,anthropic.com,Claude
+  - DOMAIN-SUFFIX,claudeusercontent.com,Claude
+  - DOMAIN-SUFFIX,cdn.usefathom.com,Claude
+  - DOMAIN-SUFFIX,console.anthropic.com,Claude
+  # ================= Cursor Rules Start =================
+  - DOMAIN-SUFFIX,aicursor.com,Cursor
+  - DOMAIN-SUFFIX,cursor.sh,Cursor
+  - DOMAIN-SUFFIX,openai.com,Cursor # 作为备用，因为底层服务可能用到
+  - DOMAIN-SUFFIX,intercom.io,Cursor
+  - DOMAIN-SUFFIX,intercomcdn.com,Cursor
+  # ================= Cursor Rules End =================
+
+
+# Gemini 规则内容 (将这两行添加到你的配置文件中)
+  - DOMAIN,ai.google.dev,Gemini
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com,Gemini
+  - DOMAIN,makersuite.google.com,Gemini
+  - DOMAIN-SUFFIX,bard.google.com,Gemini
+  - DOMAIN-SUFFIX,deepmind.com,Gemini 
+  - DOMAIN-SUFFIX,deepmind.google,Gemini
+  - DOMAIN-SUFFIX,gemini.google.com,Gemini
+  - DOMAIN-SUFFIX,generativeai.google,Gemini
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,Gemini
+  - DOMAIN-SUFFIX,apis.google.com,Gemini
+  - DOMAIN-KEYWORD,colab,Gemini
+  - DOMAIN-KEYWORD,developerprofiles,Gemini
+  - DOMAIN-KEYWORD,generativelanguage,Gemini
