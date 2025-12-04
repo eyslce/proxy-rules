@@ -1,0 +1,69 @@
+{
+  // Python 解释器配置
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  
+  // Python 分析器路径 - 包含 PDM 安装的包
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/.venv/lib/python*/site-packages"
+  ],
+  
+  // 自动激活虚拟环境
+  "python.terminal.activateEnvironment": true,
+  
+  // Python 终端路径
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  
+  // PDM 相关设置
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  
+  // 使用 PDM 作为包管理器
+  "python.packaging.manager": "pdm",
+  
+  // 文件关联
+  "files.associations": {
+    "pyproject.toml": "toml",
+    "pdm.lock": "toml"
+  },
+  
+  // 排除文件
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    ".pdm-python": true
+  },
+  
+  // 搜索排除
+  "search.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    ".pdm-python": true,
+    ".venv": true
+  },
+  
+  // 编辑器设置
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  
+  // 终端配置 - 自动激活 PDM 环境
+  "terminal.integrated.env.linux": {
+    "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+  },
+  
+  // 如果 PDM 使用全局虚拟环境，取消注释下面的配置
+  // "python.defaultInterpreterPath": "${env:PDM_PYTHON}",
+  
+  // PDM 命令别名（可选）
+  "terminal.integrated.profiles.linux": {
+    "PDM": {
+      "path": "/usr/bin/zsh",
+      "args": ["-c", "cd ${workspaceFolder} && pdm shell"]
+    }
+  }
+}
+
